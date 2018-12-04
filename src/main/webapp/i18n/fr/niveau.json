@@ -1,0 +1,11 @@
+{
+    "jhipsterSampleApplicationApp": {
+        "Niveau": {
+            "null": "",
+            "DEBUTANT": "DEBUTANT",
+            "INTERMERDIAIRE": "INTERMERDIAIRE",
+            "AVANCE": "AVANCE",
+            "EXPERT": "EXPERT"
+        }
+    }
+}

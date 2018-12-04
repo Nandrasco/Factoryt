@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="formateur">
+            <h2><span jhiTranslate="jhipsterSampleApplicationApp.formateur.detail.title">Formateur</span> {{formateur.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.formateur.nom">Nom</span></dt>
+                <dd>
+                    <span>{{formateur.nom}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.formateur.prenom">Prenom</span></dt>
+                <dd>
+                    <span>{{formateur.prenom}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.formateur.coordonnees">Coordonnees</span></dt>
+                <dd>
+                    <span>{{formateur.coordonnees}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.formateur.niveau">Niveau</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'jhipsterSampleApplicationApp.Niveau.' + formateur.niveau}}">{{formateur.niveau}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/formateur', formateur.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

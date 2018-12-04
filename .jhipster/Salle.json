@@ -1,0 +1,46 @@
+{
+    "name": "Salle",
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cout",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "dispo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "capaciteMax",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "projecteur",
+            "otherEntityName": "projecteur",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "salle"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "cursus",
+            "otherEntityName": "cursus",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "salle"
+        }
+    ],
+    "changelogDate": "20181204150257",
+    "entityTableName": "salle",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
